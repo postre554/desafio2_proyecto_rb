@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Desafio2</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <meta http-equiv="Cache-Control" content="no-store, no-cache, must-revalidate, max-age=0">
+
+
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body >
+  <!--class="is-preload-0 is-preload-1 is-preload-2"-->
+
+  
+  
+
+    <%= yield %>
+
+    
+    <%= javascript_include_tag 'application' %>
+    <%= javascript_include_tag 'breakpoints.min' %>
+    <%= javascript_include_tag 'browser.min' %>
+    <%= javascript_include_tag 'jquery.min' %>
+    <script src="https://kit.fontawesome.com/2dbf2bcf5a.js" crosssorigin="anonymous"></script>
+    <% if request.env['PATH_INFO'] == '/' %>
+      <%=  javascript_include_tag 'main' %>
+    <% end %>
+  
+
+   
+    
+  </body>
+</html>
